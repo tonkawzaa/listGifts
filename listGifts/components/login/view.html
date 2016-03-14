@@ -1,0 +1,49 @@
+<div data-role="view" data-title="login" data-layout="main" data-model="app.login" data-show="app.login.onShow" data-after-show="app.login.afterShow">
+    <div id="loginModel" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item">
+
+
+                    <label>
+
+                        Username
+
+                        <input data-bind="value: loginModel.fields.username" placeholder="Username" type="text">
+                    </label>
+
+                </li>
+                <li class="form-content-item">
+
+
+                    <label>
+
+                        password
+
+                        <input data-bind="value: loginModel.fields.password" placeholder="password" type="text">
+                    </label>
+
+                </li>
+            </ul>
+
+            <div class="button-group">
+                <a data-role="button" data-bind="events: { click: loginModel.cancel }">Cancel</a>
+                <a class="primary" data-role="button" data-bind="events: { click: loginModel.submit }">login</a>
+            </div>
+            <div class="button-group">
+                <a data-role="button" data-bind="events: { click: loginModel.showtoken }">show token</a>
+                <a class="primary" data-role="button" data-bind="events: { click: loginModel.viewpoint }">viewPoint</a> 
+                <a class="primary" data-role="button" data-bind="events: { click: loginModel.logout }">logout</a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_loginModel -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+        <!-- END_CUSTOM_CODE_loginModel -->
+    </div>
+
+    <!-- START_CUSTOM_CODE_login -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_login -->
+</div>

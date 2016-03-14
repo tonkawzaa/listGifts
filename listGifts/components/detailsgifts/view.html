@@ -1,0 +1,32 @@
+ <div data-role="view" data-title="details Gifts" data-layout="main" data-model="app.detailsgifts" 
+     data-show="app.detailsgifts.onShow" data-after-show="app.detailsgifts.afterShow">
+
+     
+<!--
+    <div id="data1Content" > 
+    <span data-bind="text: title"></span>
+     </div>
+ -->
+    
+     <div id="data2Content" >  
+        <span data-bind="text: id"></span></br>
+    	<span data-bind="text: name"></span></br>
+
+</div>        
+        
+	<div id="data3Content" >
+   	<img data-bind="attr: { src: image_mobile }" />
+	</div>
+	<div id="submitfunc" class="form-view">
+        <form>
+			<div class="button-group">
+                <a data-role="button" data-bind="events: { click: cancel }">Cancel</a>
+                <a class="primary" data-role="button" data-bind="events: { click: submit }">ตกลง</a>
+            </div>
+       </form>
+  	</div>
+ </div>
+        
+     
+     
+

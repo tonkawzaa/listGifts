@@ -5,6 +5,7 @@
     <title></title>
     <meta charset="utf-8">
     <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
+
     <link href="styles/main.css" rel="stylesheet">
 
     <script src="cordova.js"></script>
@@ -14,6 +15,8 @@
 </head>
 
 <body id="kendoUiMobileApp">
+    <script src="components/detailsgifts/index.js"></script>
+    <script src="components/login/index.js"></script>
     <script src="components/home/index.js"></script>
     <div data-role="layout" data-id="main">
         <header data-role="header">
@@ -22,8 +25,6 @@
                 <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
             </div>
         </header>
-			
-        <!-- application views will be rendered here -->
     </div>
 
     <div data-role="layout" data-id="main-nonav">
@@ -32,8 +33,6 @@
                 <span data-role="view-title"></span>
             </div>
         </header>
-
-        <!-- application views will be rendered here -->
     </div>
 
     <div id="appDrawer" data-role="drawer" data-title="Navigation">
@@ -44,8 +43,12 @@
         </header>
         <ul id="navigation-container" data-role="listview">
             <li><a href="components/home/view.html" data-icon="home">list Gifts</a></li>
+            <li><a href="components/login/view.html" data-icon="home">login</a></li>
+            <li><a href="components/detailsgifts/view.html" data-icon="home">details Gifts</a></li>
         </ul>
     </div>
+    
+
     <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
 

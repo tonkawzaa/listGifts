@@ -1,0 +1,19 @@
+<div data-role="view" data-title="Home View" data-layout="main" data-model="app.home" 
+     data-show="app.home.onShow" data-after-show="app.home.afterShow">
+ 
+    <div>
+        <span data-bind="text: point ,source: homeModel.data" ></span>   
+    </div>
+    
+    
+                 
+
+    <div class="button-group">
+                <a data-role="button" data-bind="events: { click: homeModel.showtoken }">show token</a>
+                <a class="primary" data-role="button" data-bind="events: { click: homeModel.logout }">logout</a>
+    </div>
+    
+<div id ="listView"></div>
+
+
+</div>

@@ -8,6 +8,47 @@
       "title": "list Gifts",
       "addToNavigation": true,
       "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "login",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "username",
+              "title": "Username",
+              "inputType": "text",
+              "titlePosition": "left",
+              "placeholder": "Username"
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "password",
+              "title": "password",
+              "inputType": "text",
+              "titlePosition": "left",
+              "placeholder": "password"
+            }
+          ],
+          "name": "loginModel",
+          "submitButton": "login",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "title": "login",
+      "addToNavigation": true,
+      "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "detailsgifts",
+      "components": [],
+      "title": "details Gifts",
+      "addToNavigation": true,
+      "icon": "home"
     }
   ],
   "dataProviders": [],

@@ -1,11 +1,20 @@
-<div data-role="view" data-title="list gifts" data-layout="main" data-model="app.home" data-show="app.home.onShow" data-after-show="app.home.afterShow">
+<div data-role="view" data-title="list Gifts" data-layout="main" data-model="app.home" data-show="app.home.onShow" data-after-show="app.home.afterShow">
 
+    <ul data-role="listview" data-source="app.home.data" data-template="books-template"></ul>
+        
     
 
+
     <script type="text/x-kendo-template" id="books-template">
-        
-            <div class="bookImage">#: required_points #</div>
-            <div class="bookTitle">#: id #</div>
-            <div class="bookAuthor">#: end_date #</div>
-    </script>
+        <a href="components/detailsgifts/view.html?id=#: id #">
+            <div>#: required_points #</div>
+            <div>#: id #</div>
+            <div>#: end_date #</div>
+            <div><img style="width:100%;" src="data:image/png;base64,#: image_mobile #" /></div>
+            <div>#: name #</div>
+        </a>
+     </script>
+  
+    
+    
 </div>

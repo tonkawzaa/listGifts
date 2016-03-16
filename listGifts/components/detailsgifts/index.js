@@ -41,7 +41,7 @@ app.detailsgifts = kendo.observable({
                         url: "https://greenapi.odooportal.com/api/v1/burn",
                         contentType: "application/json",
                 		headers: {'Authorization' : header_token},
-                		data: JSON.stringify({ gift_id: "2" }),
+                		data: JSON.stringify({ gift_id: item }),
                         success: function(result) {
                             
                             navigator.notification.alert(result.data);

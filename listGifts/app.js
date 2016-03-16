@@ -6,12 +6,7 @@
         
         
     };
-   window.book = {
-       back: function() {
-            app.navigate("#:back");
-        },  
-   };
-    
+   
     var bootstrap = function() {
         $(function() {
             app.mobileApp = new kendo.mobile.Application(document.body, {

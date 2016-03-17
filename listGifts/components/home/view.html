@@ -1,8 +1,8 @@
 <div data-role="view" data-title="list Gifts" data-layout="main" data-model="app.home" data-show="app.home.onShow" data-after-show="app.home.afterShow">
 
-    <ul data-role="listview" data-source="app.home.data" data-template="books-template" data-endless-scroll="true"></ul>
-        
     
+        
+   <!-- <ul data-role="listview" data-source="app.home.data" data-template="books-template"></ul> -->
 
 
     <script type="text/x-kendo-template" id="books-template">
@@ -10,11 +10,27 @@
             <div>#: required_points #</div>
             <div>#: id #</div>
             <div>#: end_date #</div>
-            <div><img style="width:100%;" src="data:image/png;base64,#: image_mobile #" /></div>
+            <div><img style="width:80%;" src="data:image/png;base64,#: image_mobile #" /></div>
             <div>#: name #</div>
         </a>
      </script>
   
+ <!--   <div style="width: 110px; height: 110px; background-image: url(http://demos.telerik.com/kendo-ui/content/web/foods/1.jpg);"></div> -->
     
+    <div data-role="scrollview"
+        data-source="app.home.data"
+        data-template="books-template"
+        data-content-height="300px"
+         id ="scrollview1">
+    </div>
+           
+     <div data-role="listview" data-source="app.home.data5" data-template="books-template" ></div>
+    		
+    <!--
+     <script type="text/x-kendo-template" id="books-template">
+ 		<div>#: name  #</div>     
+        <div><img style="width:50%;" src="data:image/png;base64,#: image_mobile #" /></div>
+     </script>  
+-->
     
 </div>

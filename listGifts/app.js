@@ -10,7 +10,7 @@
     var bootstrap = function() {
         $(function() {
             app.mobileApp = new kendo.mobile.Application(document.body, {
-                skin: 'flat',
+                skin: 'nova',
                 initial: 'components/home/view.html'
             });
         });

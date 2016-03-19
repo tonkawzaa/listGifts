@@ -96,8 +96,52 @@ app.home = kendo.observable({
     }),
     
     onShow: function(e) { 
+                       var viewModel = kendo.observable({
+                        inputValue: "Input value",
+                        textareaValue: "Textarea value"
+                        });
+                        kendo.bind($("#view2"), viewModel);
         
+        $.ajax({
+               type: "POST",
+               url: "https://greenapi.odooportal.com/api/v1/product_by_barcode",
+               contentType: "application/json",
+               //data: JSON.stringify({ barcode: item }),
+                data: JSON.stringify({ barcode: "8992760221011" }),
+               success: function(result) {
+                            
+                navigator.notification.alert(result.data);
+                            
+               		e.view.element.find("#scrollView").kendoMobileListView({
+        			template: kendo.template($("#tmp").html()),
+        			dataSource: result.data.certifications,
+                     });
+               },
+                error: function(result) {
+                      navigator.notification.alert(result.error_message);
+
+                         },
+             });
+            /*
+            e.view.element.find("#scrollView").kendoMobileListView({
+        			//template : "<strong>#:data.foo#</strong>",
+        			template: kendo.template($("#tmp").html()),
+        			dataSource: kendo.data.DataSource.create([{foo: "bar"}, {foo: "baz"}])	
+                    
+     });
+		*/
+                        
     },
+    onClick:function(){
+    		navigator.notification.alert("onclick");
+		},
     afterShow: function() {}
 });
+(function(parent) {
+    var homeModel = kendo.observable({
+        
+    });
 
+
+    parent.set('homeModel', homeModel);
+})(app.home);

@@ -16,7 +16,7 @@ app.detailsgifts = kendo.observable({
    
     onShow: function(e) {
         var item = e.view.params.id;
-      
+        navigator.notification.alert(item);
         /*
         var location = window.location.toString();
         var id = location.substring(location.lastIndexOf('?')+4);

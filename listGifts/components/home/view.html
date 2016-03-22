@@ -20,7 +20,7 @@
         </a>
      </script>
     
-       <script type="text/x-kendo-template" id="scrollview-template">
+     <script type="text/x-kendo-template" id="scrollview-template">
             <img style="width:80%;" src="data:image/png;base64,#: image_mobile #" />
      </script>
     
@@ -34,19 +34,12 @@
     
     <div id="listli"></div>
 -->
-    <script id="tmp" type="text/x-kendo-template">
-        <label>
-    <img src="data:image/png;base64,#: image_small #" />
-    <input name="location" type="radio">#: name #
-        </label>
-   </script>
-    
-            <div id="scrollView" ></div>
+ 
 
         <a data-align="right" href="#popover-location" data-rel="popover" data-role="button">Location</a>
             
     
-    
+    <!--
     <div data-role="popover" id="popover-location" data-popup='{"width": "20em"}'>
         <div data-role="view">
             <ul data-role="listview" data-click="homeModel.closeParentPopover">
@@ -56,14 +49,47 @@
             </ul>
         </div>
     </div>
-    
-    <ul data-role="listview" data-source="app.home.data2" data-template="data2-template"></ul>
+    -->
+    <div data-role="popover" id="popover-location" data-popup='{"height": "20em","width": "20em"}'>
+        <div data-role="view">
+            <ul data-role="listview" data-source="app.home.data2" data-template="data2-template"></ul>
+         </div>
+    </div>
     
 <script id="data2-template" type="text/x-kendo-template">
-    
-  <img src="http://demos.telerik.com/kendo-ui/content/web/foods/#= ProductID #.jpg">
-  <p>#= ProductName #</p>
+    <label>
+        #= ProductName #
+      <img src="http://demos.telerik.com/kendo-ui/content/web/foods/#= ProductID #.jpg">
+      <input name="location" type="radio">
+    </label>
 </script>
+    
+
+                      <label>
+                         <input type="radio" name="fruit" value="Apple"
+                                data-bind="checked: homeModel.fields.selectedfruit" />Apple
+                     </label>
+    
+                     <label>
+                         <input type="radio" name="fruit" value="Banana"
+                                data-bind="checked: homeModel.fields.selectedfruit" />Banana
+                     </label>
+                     <label>
+                         <input type="radio" name="fruit" value="Orange"
+                                data-bind="checked: homeModel.fields.selectedfruit" />Orange
+                     </label>
+  
+    
+       <script id="tmp" type="text/x-kendo-template">
+        <label>
+        <img src="data:image/png;base64,#: image_small #" />
+        <input type="radio" name="fruit" value="TOP" data-bind="checked: homeModel.fields.selectedfruit" />#: name #
+        </label>
+       </script>
+    
+           <!-- <div id="scrollView" ></div> -->
+    
+    <a data-align="right"  data-role="button" data-bind="events: { click: homeModel.submit }">submit</a>
     
 
 </div>

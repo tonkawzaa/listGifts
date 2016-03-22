@@ -2,7 +2,6 @@
 
 app.home = kendo.observable({
     
-    
 			data: new kendo.data.DataSource({
                 type: "data",
             transport: {
@@ -95,6 +94,7 @@ app.home = kendo.observable({
         } */
     }),
     
+    
     onShow: function(e) { 
                     
         $.ajax({
@@ -121,10 +121,14 @@ app.home = kendo.observable({
             e.view.element.find("#scrollView").kendoMobileListView({
         			//template : "<strong>#:data.foo#</strong>",
         			template: kendo.template($("#tmp").html()),
-        			dataSource: kendo.data.DataSource.create([{foo: "bar"}, {foo: "baz"}])	
-                    
-     });
+        			dataSource: kendo.data.DataSource.create([{foo: "bar"}, {foo: "baz"}])
+             });
 		*/
+        
+       function onChange() {
+
+                kendoConsole.log("555");
+            };
                         
     },
     
@@ -135,9 +139,21 @@ app.home = kendo.observable({
 		},
     afterShow: function() {}
 });
+
+
 (function(parent) {
     
     var homeModel = kendo.observable({
+        
+        fields: {
+            selectedfruit: 'Apple',
+        },
+        
+        submit: function() {
+            
+           navigator.notification.alert(homeModel.fields.selectedfruit);
+
+        },
         
         closeParentPopover :function(e) {
 
@@ -145,9 +161,10 @@ app.home = kendo.observable({
         navigator.notification.alert("closeParentPopover");
         
         //popover.close();
-    },
+        },
         
     });
 
     parent.set('homeModel', homeModel);
 })(app.home);
+

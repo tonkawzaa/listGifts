@@ -12,12 +12,52 @@
         <span data-bind="text: id"></span><br>
     	<span data-bind="text: name"></span><br>
 
-</div>        
+        </div>        
         
 	<div id="data3Content" >
    	<img data-bind="attr: { src: image_mobile }" />
 	</div>
+     <!--
+     <ul id="radioshop2" data-role="listview" >
+       
+         <li>
+                     <label>
+                         <input type="radio" name="fruit" value="Apple"
+                                data-bind="checked: selectedfruit" />Apple
+                     </label>
+         </li>
+         <li>
+                     <label>
+                         <input type="radio" name="fruit" value="Banana"
+                                data-bind="checked: selectedfruit" />Banana
+                     </label>
+          </li>
+         <li>
+                     <label>
+                         <input type="radio" name="fruit" value="Orange"
+                                data-bind="checked: selectedfruit" />Orange
+                     </label>
+          </li>
+     </ul>
+     -->
+    
+     <a data-align="right" href="#popover-location" data-rel="popover" data-role="button">Location</a>
+     
+     <div data-role="popover" id="popover-location" data-popup='{"width": "20em","hight": "20em"}'>
+        <div data-role="view">
+            <div id="radioshop" data-role="listview" data-bind="source:dsData" data-template="shop-template"></div>
+         </div>
+    </div>
+     
+     <script id="shop-template" type="text/x-kendo-tmpl">
+            <label>
+             <input type="radio" name="fruit" data-bind="value:name,checked: selectedfruit"/><span data-bind="text: name"></span>
+            </label>
+    </script>
+     
+   
 	<div id="submitfunc" class="form-view">
+                    
         <form>
 			<div class="button-group">
                 <a data-role="button" data-bind="events: { click: cancel }">Cancel</a>
@@ -25,7 +65,10 @@
             </div>
        </form>
   	</div>
+     <img src="https://green.odooportal.com/web/image?model=product.template&id=1&field=image&unique=20160322115554" />
  </div>
+    
+
         
      
      

@@ -11,7 +11,7 @@
         $(function() {
             app.mobileApp = new kendo.mobile.Application(document.body, {
                 skin: 'nova',
-                initial: 'components/home/view.html'
+                initial: 'components/detailsgifts/view.html'
             });
         });
     };

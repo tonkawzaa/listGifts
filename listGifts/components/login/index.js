@@ -38,13 +38,13 @@ app.login = kendo.observable({
             token = localStorage.getItem(token);
             //token = localStorage.getItem(token);
             if (token)
-        {
-            navigator.notification.alert(token);
-            //window.location.href = "components/home/view.html";
-            app.mobileApp.navigate('components/home/view.html');
-        }else{
+            {
+                navigator.notification.alert(token);
+                //window.location.href = "components/home/view.html";
+                app.mobileApp.navigate('components/home/view.html');
+            }else{
             navigator.notification.alert("token is null");
-        };
+            };
            
         },
         logout: function() {

@@ -20,7 +20,7 @@ app.detailsgifts = kendo.observable({
                             type: "POST",
                             url: "https://greenapi.odooportal.com/api/v1/shops",
                             contentType: "application/json; charset=utf-8",
-                            data: JSON.stringify({ offset: 0,limit:50 }),
+                      
                             dataType: "json",
                             success: function (result) {
                                 options.success(result.data);
@@ -127,7 +127,7 @@ app.detailsgifts = kendo.observable({
         kendo.bind($('#submitfunc'),data1);
         kendo.bind($('#data1Content'),data1);
         
-          
+          /*
             $.ajax({
                   type: "POST",
                   url: "https://greenapi.odooportal.com/api/v1/gift_by_id",
@@ -149,7 +149,7 @@ app.detailsgifts = kendo.observable({
                       kendo.bind($('#data3Content'),image64);
                             				}
                     }); 
-        
+        */
 
     },
 

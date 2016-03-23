@@ -256,6 +256,33 @@
 #kendoUiMobileApp.km-nova .km-filter-wrap:before {
     color: #cacdce;
 }
+.message {
+    /*font-size: 22;
+    color: #ffffff;*/
+    text-align: center;
+}
+
+@font-face {
+   font-family: 'sukhumvitlight';
+      src: url('sukhumvitlight-webfont.eot');
+      src: url('sukhumvitlight-webfont.eot?#iefix') format('embedded-opentype'),
+           url('sukhumvitlight-webfont.woff') format('woff'),
+           url('sukhumvitlight-webfont.ttf') format('truetype');
+
+   font-weight: normal;
+   font-style: normal;
+}
+
+.u400 {
+   font-family: 'sukhumvitlight', arial, sans-serif;
+   font-weight: normal;
+   font-style: normal;
+}
+p {
+   font-family: 'sukhumvitlight', arial, sans-serif;
+   font-weight: normal;
+   font-style: normal;
+}
 
 
 /* START_CUSTOM_CODE_kendoUiMobileApp */

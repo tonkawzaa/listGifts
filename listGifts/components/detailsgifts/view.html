@@ -7,7 +7,7 @@
     <span data-bind="text: title"></span>
      </div>
  -->
-    
+    <!--
      <div id="data2Content" >  
         <span data-bind="text: id"></span><br>
     	<span data-bind="text: name"></span><br>
@@ -17,46 +17,50 @@
 	<div id="data3Content" >
    	<img data-bind="attr: { src: image_mobile }" />
 	</div>
-     
+  -->   
   
-     <table style="width:100%; " border="1" class="message">
+ 
+    <div id = "radioselectedfruit">
+         
+        <table style="width:100%; " border="1" class="message">
          <tr>
              <td>
-                 <label>
-                         <input type="radio" name="fruit" value="Apple"
-                                data-bind="checked: selectedfruit" /><br>Apple
-                 </label>
-                 
+                     <label>
+                         <input type="radio" name="fruit" value="1"
+                                data-bind="checked: fields.selectedfruit" /><br>Apple
+                     </label>
+            </td>
+             <td>
+                     <label>
+                         <input type="radio" name="fruit" value="2"
+                                data-bind="checked: fields.selectedfruit" /><br>Banana
+                     </label>
              </td>
              <td>
-                 <label>
-                         <input type="radio" name="fruit" value="Banana"
-                                data-bind="checked: selectedfruit" /><br>Banana
-                 </label>
-                 
+                     <label>
+                         <input type="radio" name="fruit" value="3"
+                                data-bind="checked: fields.selectedfruit" /><br>Orange
+                     </label>
              </td>
              <td>
-                 <label>
-                         <input type="radio" name="fruit" value="Orange"
-                                data-bind="checked: selectedfruit" /><br>Orange
-                 </label>
-                 
+                     <label>
+                         <input type="radio" name="fruit" value="4"
+                                data-bind="checked: fields.selectedfruit" /><br>Avocado
+                      </label>
              </td>
              <td>
-                  <label>
-                         <input type="radio" name="fruit" value="Avocado"
-                                data-bind="checked: selectedfruit" /><br>Avocado
-                  </label>
-             </td>
-             <td>
-                  <label>
-                         <input type="radio" name="fruit" value="Broccoli"
-                                data-bind="checked: selectedfruit" /><br>Broccoli
-                  </label>
-             </td>
-         </tr>
-     </table>
- 
+                      <label>
+                         <input type="radio" name="fruit" value="5"
+                                data-bind="checked: fields.selectedfruit" /><br>Broccoli
+                      </label>
+             </td>     
+             </tr>
+     </table>         
+                     <br><a data-align="right"  data-role="button" data-bind="events: { click: submitfruit }">submitfruit</a>
+  
+                     </div>
+     
+     
      
      <!--
      <ul id="radioshop2" data-role="listview" >
@@ -105,7 +109,9 @@
                 <a class="primary" data-role="button" data-bind="events: { click: submit }">ตกลง</a>
             </div>
        </form>
-  	</div>
+    </div>
+     
+     
      
      <p style="font-family: 'Lucida Grande'">ทดสอบตัวอักษร</p>
       <p>ทดสอบตัวอักษร</p>

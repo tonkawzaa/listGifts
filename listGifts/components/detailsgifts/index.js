@@ -81,6 +81,23 @@ app.detailsgifts = kendo.observable({
         });
         kendo.bind($('#radioshop'),data0);
         
+        var detailsgiftsModel2 = kendo.observable({
+        
+        fields: {
+            selectedfruit: 3,
+        },
+        
+        submitfruit: function() {
+            
+           navigator.notification.alert(detailsgiftsModel2.fields.selectedfruit);
+           //navigator.notification.alert(item);
+
+        },
+        
+        
+        }); 
+        kendo.bind($('#radioselectedfruit'),detailsgiftsModel2);
+        
         var data1 = {
             
            // title2:location,
@@ -155,4 +172,24 @@ app.detailsgifts = kendo.observable({
 
     afterShow: function() {}
 });
+
+(function(parent) {
+    
+    var detailsgiftsModel = kendo.observable({
+        
+        fields: {
+            selectedfruit: 'Banana',
+        },
+        
+        submitfruit: function() {
+            
+           navigator.notification.alert(detailsgiftsModel.fields.selectedfruit);
+
+        },
+        
+        
+    });
+
+    parent.set('detailsgiftsModel', detailsgiftsModel);
+})(app.detailsgifts);
 

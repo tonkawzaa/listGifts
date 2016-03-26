@@ -7,19 +7,26 @@
          id ="scrollView1">
    		 </div>
   -->
-   <!--    <ul data-role="listview" data-source="app.home.data5" data-template="books-template"></ul>   -->
-  <!--
-    
+       <ul data-role="listview" data-source="app.home.data" data-template="books-template" class="grid"></ul>   
+  
+    <!--
      <script type="text/x-kendo-template" id="books-template">
         <a href="components/detailsgifts/view.html?id=#: id #">
             <div>#: required_points #</div>
             <div>#: id #</div>
             <div>#: end_date #</div>
-            <div><img style="width:80%;" src="data:image/png;base64,#: image_mobile #" /></div>
+            <div><img style="width:80%;" src="#: image_url#" /></div>
             <div>#: name #</div>
         </a>
      </script>
+    -->
+    <script type="text/x-kendo-template" id="books-template">
+           #: id #  
+         <div><img style="width:100%;" src="#: image_url#" /></div>
+     </script>
     
+    
+    <!--
      <script type="text/x-kendo-template" id="scrollview-template">
             <img style="width:80%;" src="data:image/png;base64,#: image_mobile #" />
      </script>
@@ -32,9 +39,9 @@
     <textarea data-bind="value: textareaValue"></textarea>
 	</div>
     
-    <div id="listli"></div>
--->
- <!--
+    <div id="listli"></div>  
+    -->
+         <!--
 
         <a data-align="right" href="#popover-location" data-rel="popover" data-role="button">Location</a>
     -->        
@@ -80,14 +87,33 @@
                                 data-bind="checked: homeModel.fields.selectedfruit" />Orange
                      </label>
   -->
-    
+    <!--
+        <div id="scrollView" ></div> 
        <script id="tmp" type="text/x-kendo-template">
       
         #: name #
      
        </script>
    
-      <div id="scrollView" ></div> 
+      -->
+
+    <!--
+     <ul id="scrollViewfoo" class="grid" >
+         <li data-bind="text: selectedfruit"></li>
+         
+     </ul>
+    -->
+    
+    <ul class= "start" style="width:100%;">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+    </ul>
+  
     
     <a data-align="right"  data-role="button" data-bind="events: { click: homeModel.submit }">submit</a>
     

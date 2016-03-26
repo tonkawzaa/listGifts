@@ -80,6 +80,7 @@ app.detailsgifts = kendo.observable({
             
         });
         kendo.bind($('#radioshop'),data0);
+        kendo.bind($('#scrollViewfoo'),data0);
         
         var detailsgiftsModel2 = kendo.observable({
         

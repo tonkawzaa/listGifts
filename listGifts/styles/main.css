@@ -284,6 +284,26 @@ p {
    font-style: normal;
 }
 
+ ul { list-style: none; }
+
+ 
+
+ .grid li 
+{ 
+     float: left;
+     width: 45%; 
+     height: 200px; 
+    /* border-right: 1px dotted #CCC;
+     border-bottom: 1px dotted #CCC;*/
+     padding: 20px; 
+    
+ }
+
+.start 
+{
+    position:relative;
+}
+
 
 /* START_CUSTOM_CODE_kendoUiMobileApp */
 

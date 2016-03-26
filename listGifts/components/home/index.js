@@ -19,10 +19,8 @@ app.home = kendo.observable({
                         });
                     }
             },
-        /* schema: {
-            data: "data"
-        } */
     }),
+    /*
     
      data2 : new kendo.data.DataSource({
         type: "odata",
@@ -70,7 +68,7 @@ app.home = kendo.observable({
             data: "data"
         },
      }),
-    
+    */
     data5: new kendo.data.DataSource({
                 type: "data",
             transport: {
@@ -79,11 +77,11 @@ app.home = kendo.observable({
                             type: "POST",
                             url: "https://greenapi.odooportal.com/api/v1/gifts",
                             contentType: "application/json; charset=utf-8",
-                            data: JSON.stringify({ offset: 0,limit:50 }),
                             dataType: "json",
                             success: function (result) {
-                                options.success(result.data);
                                // navigator.notification.alert(result.data);
+                              options.success(result.data);
+                               
                                 
                             }
                         });
@@ -96,7 +94,7 @@ app.home = kendo.observable({
     
     
     onShow: function(e) { 
-                    
+            /*        
         $.ajax({
                type: "POST",
                url: "https://greenapi.odooportal.com/api/v1/product_by_barcode",
@@ -117,13 +115,42 @@ app.home = kendo.observable({
 
                          },
              });
+        */
             /*
-            e.view.element.find("#scrollView").kendoMobileListView({
+            e.view.element.find("#scrollViewfoo").kendoMobileListView({
         			//template : "<strong>#:data.foo#</strong>",
-        			template: kendo.template($("#tmp").html()),
+        			template: kendo.template($("#scrollViewfoo_tmp").html()),
         			dataSource: kendo.data.DataSource.create([{foo: "bar"}, {foo: "baz"}])
              });
-		*/
+		    */
+            var data0 = kendo.observable({
+            selectedfruit : "Gourmet",
+            
+            dsData: new kendo.data.DataSource({
+            transport: {
+                read: function(options) {
+                        $.ajax({
+                            type: "POST",
+                            url: "https://greenapi.odooportal.com/api/v1/shops",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            success: function (result) {
+                                options.success(result.data);
+                              // navigator.notification.alert(result.data);
+                                
+                            },
+                            error: function(result) {
+                                  //navigator.notification.alert(result);
+                         },
+                            });
+                                        }
+                        },
+                }),
+          
+            
+        });
+       
+        kendo.bind($('#scrollViewfoo'),data0);
         
        function onChange() {
 

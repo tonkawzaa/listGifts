@@ -123,34 +123,28 @@ app.home = kendo.observable({
         			dataSource: kendo.data.DataSource.create([{foo: "bar"}, {foo: "baz"}])
              });
 		    */
-            var data0 = kendo.observable({
-            selectedfruit : "Gourmet",
-            
-            dsData: new kendo.data.DataSource({
-            transport: {
-                read: function(options) {
-                        $.ajax({
+        
+            $.ajax({
                             type: "POST",
-                            url: "https://greenapi.odooportal.com/api/v1/shops",
+                            url: "https://greenapi.odooportal.com/api/v1/gifts",
                             contentType: "application/json; charset=utf-8",
                             dataType: "json",
                             success: function (result) {
-                                options.success(result.data);
-                              // navigator.notification.alert(result.data);
+                            e.view.element.find("#scrollViewfoo").kendoMobileListView({
+        			        template: kendo.template($("#scrollViewfoo_tmp").html()),
+        			        dataSource: result.data,
+                                                                                   });
                                 
-                            },
-                            error: function(result) {
-                                  //navigator.notification.alert(result);
-                         },
-                            });
-                                        }
-                        },
-                }),
-          
-            
+                            }
+                       });
+        
+            var  dataselectedfruit= kendo.observable({
+            selectedfruit : "Gourmet",
+
         });
        
-        kendo.bind($('#scrollViewfoo'),data0);
+        kendo.bind($('#scrollViewfoo'),dataselectedfruit);
+        kendo.bind($('#listviewgrid'),dataselectedfruit);
         
        function onChange() {
 

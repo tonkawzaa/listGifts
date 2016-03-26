@@ -7,8 +7,9 @@
          id ="scrollView1">
    		 </div>
   -->
-       <ul data-role="listview" data-source="app.home.data" data-template="books-template" class="grid"></ul>   
-  
+    <!--
+       <ul id="listviewgrid" data-role="listview" data-source="data6" data-template="books-template" class="grid"></ul>   
+  -->
     <!--
      <script type="text/x-kendo-template" id="books-template">
         <a href="components/detailsgifts/view.html?id=#: id #">
@@ -20,11 +21,12 @@
         </a>
      </script>
     -->
+    <!--
     <script type="text/x-kendo-template" id="books-template">
            #: id #  
          <div><img style="width:100%;" src="#: image_url#" /></div>
      </script>
-    
+    -->
     
     <!--
      <script type="text/x-kendo-template" id="scrollview-template">
@@ -96,15 +98,23 @@
        </script>
    
       -->
+    
+    
 
-    <!--
+    
      <ul id="scrollViewfoo" class="grid" >
          <li data-bind="text: selectedfruit"></li>
          
      </ul>
-    -->
-    
-    <ul class= "start" style="width:100%;">
+   
+     <script id="scrollViewfoo_tmp" type="text/x-kendo-template">
+      
+         #: id #  
+         <div><img style="width:100%;" src="#: image_url#" /></div>
+     
+       </script>
+    <div>
+    <ul>
         <li>Item 1</li>
         <li>Item 2</li>
         <li>Item 3</li>
@@ -113,7 +123,7 @@
         <li>Item 6</li>
         <li>Item 7</li>
     </ul>
-  
+    </div>
     
     <a data-align="right"  data-role="button" data-bind="events: { click: homeModel.submit }">submit</a>
     

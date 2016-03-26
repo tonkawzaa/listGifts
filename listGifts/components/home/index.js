@@ -176,12 +176,10 @@ app.home = kendo.observable({
 
         },
         
-        closeParentPopover :function(e) {
+        clickedImage1 :function() {
+            navigator.notification.alert("clickedImage1");
 
-        //var popover = e.sender.element.closest('[data-role=popover]').data('kendoMobilePopOver');
-        navigator.notification.alert("closeParentPopover");
-        
-        //popover.close();
+        app.mobileApp.navigate('components/detailsgifts/view.html');
         },
         
     });

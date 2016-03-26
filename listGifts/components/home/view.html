@@ -1,12 +1,24 @@
 <div data-role="view" data-title="list Gifts" data-layout="main" data-model="app.home" data-show="app.home.onShow" data-after-show="app.home.afterShow">
-<!--
-        <div data-role="scrollview"
+
+    <div data-role="scrollview"
         data-source="app.home.data"
         data-template="scrollview-template"
         data-content-height="300px"
          id ="scrollView1">
-   		 </div>
-  -->
+
+   </div>
+    
+     <script type="text/x-kendo-template" id="scrollview-template">
+        <a href="\\#components/detailsgifts/view.html?id=#: id #">
+              
+                    <img style="width:100%;" src="#: image_url#"  />
+              </a>
+     </script>
+    
+      
+            
+       
+ 
     <!--
        <ul id="listviewgrid" data-role="listview" data-source="data6" data-template="books-template" class="grid"></ul>   
   -->
@@ -28,12 +40,27 @@
      </script>
     -->
     
-    <!--
-     <script type="text/x-kendo-template" id="scrollview-template">
-            <img style="width:80%;" src="data:image/png;base64,#: image_mobile #" />
-     </script>
     
-    -->
+   
+    
+   
+    
+    <div data-role="scrollview"
+        data-content-height="300px" id="scrollstatic">
+        
+   	<div data-role="page">
+          
+               <a href="#components/detailsgifts/view.html?id=1">
+                <img style="width:100%;" src="image/point1.jpg"  />
+                </a>
+         
+        </div>
+        
+        <div data-role="page">	 
+            <img style="width:100%;" src="image/point1.jpg" data-bind="events: { click: homeModel.clickedImage1 }"  />
+        </div>
+    </div>
+   
     
     <!--
     <div id="view2">
@@ -109,10 +136,11 @@
    
      <script id="scrollViewfoo_tmp" type="text/x-kendo-template">
       
-         #: id #  
+         <a href="components/detailsgifts/view.html?id=#: id #">
          <div><img style="width:100%;" src="#: image_url#" /></div>
-     
+         </a>
        </script>
+    <table style="width:100%;"></table>
     <div>
     <ul>
         <li>Item 1</li>
